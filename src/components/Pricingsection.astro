@@ -3,43 +3,49 @@ const priceboxes = [
   {
     popular:false,
     packageName:"Starter",
-    price:'25.00',
+    price:'49.99',
     subtitle:'Features',
     btn:'Purchase Now',
     purchaseLink:'/#',
     offerlist: [
-      {title: "Up to 1 User"},
-      {title: "All UI components"},
-      {title: "Lifetime access"},
-      {title: "Free updates"},
+      {title: "Up to 3 User"},
+      {title: "Up to 5 pitch analyses"},
+      {title: "Up to 5 investor suggestions"},
+      {title: "Up to 7 warm intro request"},
+      {title: "Basic customer support"},
+      {title: "Limited VC database access "},
     ],
   },
   {
     popular:true,
-    packageName:"Basic",
-    price:'59.00',
+    packageName:"Pro(Ideal for mid size teams)",
+    price:'79.99',
     subtitle:'Features',
     btn:'Purchase Now',
     purchaseLink:'/#',
     offerlist: [
-      {title: "Up to 1 User"},
-      {title: "All UI components"},
-      {title: "Lifetime access"},
-      {title: "Free updates"},
+      {title: "Up to 10 User"},
+      {title: "Maximum 10 pitch analyses"},
+      {title: "Up to 12 investor suggestions"},
+      {title: "15 warm intro requests"},
+      {title: "On-demand customer support"},
+      {title: "Access to exclusive investor networking events"},
+      {title: "Personalized pitch improvement support"},
     ],
   },
   {
     popular:false,
     packageName:"Premium",
-    price:'99.00',
+    price:'149',
     subtitle:'Features',
     btn:'Purchase Now',
     purchaseLink:'/#',
     offerlist: [
-      {title: "Up to 1 User"},
-      {title: "All UI components"},
-      {title: "Lifetime access"},
-      {title: "Free updates"},
+      {title: "Eveyrthing in Premium Plan  "},
+      {title: "Hacker House access in Palo Alto and New York"},
+      {title: "Custom integrations with your existing tools"},
+      {title: "Tailored training and onboarding"},
+      {title: "Custom contract terms"},
     ],
   },
 ]
@@ -54,15 +60,13 @@ const priceboxes = [
     <div class="-mx-4 flex flex-wrap">
       <div class="w-full px-4">
         <div class="mx-auto mb-[60px] max-w-[510px] text-center">
-          <span class="mb-2 block text-lg font-semibold text-primary">
-            Pricing Table
-          </span>
+      
           <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:leading-[1.2] md:text-[40px]">
-            Awesome Pricing Plan
+           Pricing plans
           </h2>
+          
           <p class="text-base text-body-color dark:text-dark-6">
-            There are many variations of passages of Lorem Ipsum available
-            but the majority have suffered alteration in some form.
+            Whether you’re just lifting off or already soaring high in the startup stratosphere, we’ve got a plan that fits your mission🌟
           </p>
         </div>
       </div>
@@ -94,7 +98,7 @@ const priceboxes = [
               <span class="text-xl font-medium">$</span>
               <span class="ml-1 -tracking-[2px]">{pricebox.price}</span>
               <span class="text-base font-normal text-body-color dark:text-dark-6">
-                Per Month
+                Per seat/month
               </span>
             </h2>
   
