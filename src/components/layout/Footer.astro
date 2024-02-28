@@ -55,11 +55,11 @@ const footerLinks = [
         href: '/',
         isExternal: false,
       },
-      {
-        name: 'Refund policy',
-        href: '/',
-        isExternal: false,
-      },
+      // {
+      //   name: 'Refund policy',
+      //   href: '/',
+      //   isExternal: false,
+      // },
     ],
   },
   {
@@ -107,11 +107,19 @@ const footerLinks = [
             href="/"
             class="mb-6 inline-block max-w-[160px]"
           >
-            <img
+            <!-- <img
               src="/assets/logo/logo-white.svg"
               alt="logo"
               class="max-w-full"
-            />
+            /> -->
+            {(Astro.url.pathname === '/') ? (
+  <h1 class="header-logo w-full text-4xl font-bold dark:text-white">Striva</h1>
+) : (
+  <>
+    <h1 class="w-full dark:hidden text-4xl font-bold">Striva</h1>
+    <h1 class="w-full hidden dark:block text-white text-4xl font-bold">Striva</h1>
+  </>
+)}
           </a>
           <p class="mb-8 max-w-[270px] text-base text-gray-7">
             We create digital experiences for brands and companies by using

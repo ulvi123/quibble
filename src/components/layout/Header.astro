@@ -45,7 +45,8 @@ const menuitems = [
     <div class="relative -mx-4 flex items-center justify-between">
       <div class="w-60 max-w-full px-4">
         <a href="/" class="navbar-logo block w-full py-5">
-          {(Astro.url.pathname === '/') ? (
+          
+          <!-- {(Astro.url.pathname === '/') ? (
             <img
               src="/assets/logo/logo-white.svg"
               alt="logo"
@@ -54,8 +55,21 @@ const menuitems = [
           ) : (
             <img src="/assets/logo/logo.svg" alt="logo" class="w-full dark:hidden" />
             <img src="/assets/logo/logo-white.svg" alt="logo" class="w-full hidden dark:block" />
-          )}
-          
+          )} -->
+
+          {(Astro.url.pathname === '/') ? (
+  <h1 class="header-logo w-full text-4xl font-bold dark:text-white">Striva</h1>
+) : (
+  <>
+    <h1 class="w-full dark:hidden text-4xl font-bold">Striva</h1>
+    <h1 class="w-full hidden dark:block text-white text-4xl font-bold">Striva</h1>
+  </>
+)}
+
+        
+
+
+
         </a>
       </div>
       <div class="flex w-full items-center justify-between px-4">
@@ -117,7 +131,7 @@ const menuitems = [
                           class="submenu relative top-full left-0 hidden w-[250px] rounded-sm bg-white dark:bg-dark-2 p-4 transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
                         >
                           {
-                            item.children.map(item => (
+                            item.children.map((item: { path: string | URL | null | undefined; title: unknown; }) => (
                               <a
                                 href={item.path}
                                 class="block rounded py-[10px] px-4 text-sm text-body-color dark:text-dark-6 hover:text-primary dark:hover:text-primary"
